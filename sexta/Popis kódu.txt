@@ -1,0 +1,34 @@
+Popis kódu
+
+1. Import knižnice tkinter:
+    - Na začiatku kódu importujeme knižnicu `tkinter`, ktorá nám umožňuje vytvárať grafické používateľské rozhrania (GUI) v Python.
+
+2. Vytvorenie plátna:
+    - Vytvoríme plátno pomocou `canvas = tkinter.Canvas()`.
+    - Plátno je miesto, na ktorom budeme kresliť.
+
+3. Vykreslenie mriežky:
+    - V cykle `for i in range(0, 500, 30):` vytvoríme mriežku pomocou čiar.
+    - Horizontálne čiary sú vytvorené pomocou `canvas.create_line(0, i, 500, i)`.
+    - Vertikálne čiary sú vytvorené pomocou `canvas.create_line(i, 0, i, 500)`.
+
+4. Vytvorenie červeného a modrého štvorca:
+    - Červený štvorec je vytvorený pomocou `canvas.create_rectangle(0, 0, 30, 30, fill="red", tag="s")`.
+    - Modrý štvorec je vytvorený rovnako, ale s inými hodnotami a tagom "t".
+
+5. Nastavenie premenných pre modrý štvorec:
+    - Premenné `x2` a `y2` sú inicializované na hodnoty 0.
+
+6. Funkcia `cas()`:
+    - Táto funkcia sa volá opakovane s intervalom 1000 ms.
+    - Generuje náhodné hodnoty pre `x1`, `y1`, `x2`, `y2` a `z`.
+    - Aktualizuje polohu červeného a modrého štvorca na plátne.
+
+7. Funkcia `klik(a)`:
+    - Táto funkcia sa volá pri kliknutí na plátno.
+    - Zistí, na ktorú bunku (štvorec) sme klikli.
+    - Ak klikneme na modrý štvorec, hra sa ukončí.
+    - Ak klikneme na červený štvorec, zvýši skóre.
+    - Inak zníži skóre.
+
+
